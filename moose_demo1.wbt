@@ -1,0 +1,609 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "Uneven terrain demo using an ElevationGrid to model the terrain and a"
+    "Clearpath moose."
+  ]
+  title "Uneven Terrain"
+  CFM 0.0003
+  ERP 0.4
+  basicTimeStep 4
+  defaultDamping Damping {
+  }
+  lineScale 0.2
+  contactProperties [
+    ContactProperties {
+      material1 "wheel"
+      material2 "moose wheel"
+      coulombFriction [
+        4
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.12639375203399314 0.5054860944759598 -0.8535270515561943 0.3452458902227342
+  position -75.10285853766864 10.15116261053858 13.807075996815994
+  near 1
+  follow "moose"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  luminosity 0.8
+}
+DEF PLANE Solid {
+  translation 3.9793e-12 0 5.50567e-13
+  rotation 0 1 0 4.692820414042842e-06
+  children [
+    Shape {
+      appearance SandyGround {
+        textureTransform TextureTransform {
+          rotation 0.2
+          scale 200 200
+        }
+      }
+      geometry DEF PLANE_SHAPE Plane {
+        size 2000 2000
+      }
+    }
+  ]
+  name "plane"
+  boundingObject USE PLANE_SHAPE
+}
+Forest {
+  translation -6 -4 0.01
+  shape [
+    10 0
+    0 0
+    0 10
+    10 0
+  ]
+  density 0.1
+}
+Floor {
+  translation 19 5 0.009
+  name "floor(5)"
+  size 60 3
+  appearance Parquetry {
+    type "dark strip"
+  }
+}
+CardboardBox {
+  translation 73.7487 -36.5547 0.975625
+  rotation 0.861655746286726 0.35890228321207 0.358801513369479 1.72070091325276
+  name "cardboard box(8)"
+  size 1.2 0.6 1
+}
+Pedestrian {
+  translation 30.2574 -37.1422 1.3
+  rotation 0 0 1 -2.094395307179586
+  name "pedestrian(3)"
+}
+YieldPanel {
+  translation 26.41 -39.5299 -0.0700751
+  rotation -0.7071067811865476 4.329638660197853e-17 -0.7071067811865476 3.14159
+  name "yield panel(3)"
+}
+CardboardBox {
+  translation 50.5668 -80.8221 0.463472
+  rotation 0.861655746286726 0.35890228321207 0.358801513369479 1.72070091325276
+  name "cardboard box(6)"
+  size 1.2 0.6 1
+}
+Pedestrian {
+  translation 9.39 2.78 1.45
+  rotation 0 0 1 -2.094395307179586
+}
+SnackStand {
+  translation 32.02 -91.8 0
+  rotation 0 0 1 1.5708
+  name "snack stand(3)"
+}
+SnackStand {
+  translation 27.96 -91.8 0
+  rotation 0 0 1 1.5708
+  name "snack stand(2)"
+}
+SnackStand {
+  translation 23.45 -85.07 0
+  name "snack stand(1)"
+}
+SnackStand {
+  translation 23.45 -89.13 0
+}
+PublicBin {
+  translation 37.5 -88.31 0
+}
+Bench {
+  translation 37.5 -90 0
+  rotation 0 0 1 3.14159
+}
+Floor {
+  translation 35 -87 0.009
+  name "floor(4)"
+  size 26 13
+  appearance Parquetry {
+    type "dark strip"
+  }
+}
+WoodenChair {
+  translation 32.11 -87.9051 2.90915e-08
+  rotation -3.27097e-09 2.48447e-08 1 0.785407
+  name "wooden chair(11)"
+}
+WoodenChair {
+  translation 30.0092 -85.0957 3.70525e-08
+  rotation -3.27097e-09 2.48447e-08 1 0.785407
+  name "wooden chair(10)"
+}
+WoodenChair {
+  translation 27.6337 -87.4712 9.93007e-08
+  rotation -3.27097e-09 2.48447e-08 1 0.785407
+  name "wooden chair(9)"
+}
+WoodenChair {
+  translation 29.011 -86.021 0
+  rotation 0 0 1 -2.617985307179586
+  name "wooden chair(8)"
+}
+WoodenChair {
+  translation 33.4112 -86.1825 0
+  rotation 0 0 1 -2.617985307179586
+  name "wooden chair(7)"
+}
+WoodenChair {
+  translation 31.4242 -83.6806 0
+  rotation 0 0 1 -2.617985307179586
+  name "wooden chair(6)"
+}
+WoodenChair {
+  translation 33.6221 -87.5797 0
+  rotation 0 0 1 2.3562
+  name "wooden chair(5)"
+}
+WoodenChair {
+  translation 29.4726 -87.3589 0
+  rotation 0 0 1 2.3562
+  name "wooden chair(4)"
+}
+WoodenChair {
+  translation 31.6136 -84.835 0
+  rotation 0 0 1 2.3562
+  name "wooden chair(3)"
+}
+WoodenChair {
+  translation 32.3067 -86.2161 0
+  rotation 0 0 1 -0.523595307179586
+  name "wooden chair(2)"
+}
+WoodenChair {
+  translation 27.805 -86.4116 0
+  rotation 0 0 1 -0.523595307179586
+  name "wooden chair(1)"
+}
+WoodenChair {
+  translation 29.44 -83.58 0
+  rotation 0 0 1 -0.523595307179586
+}
+TableWithUmbrella {
+  translation 30.51 -84.14 0
+  name "table with umbrella(2)"
+}
+TableWithUmbrella {
+  translation 32.8 -86.88 0
+  name "table with umbrella(1)"
+}
+TableWithUmbrella {
+  translation 28.51 -86.88 0
+}
+Bench {
+  translation 37.5 -86.66 0
+  rotation 0 0 1 3.14159
+  name "bench(1)"
+}
+ResidentialBuilding {
+  translation 18.93 12.72 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential building(1)"
+}
+ParkingLines {
+  translation 77 -67 0.01
+  rotation 0 0 1 1.5707996938995747
+  numberOfCarParks 10
+}
+ParkingLines {
+  translation 68 -67 0.01
+  rotation 0 0 1 1.5707996938995747
+  numberOfCarParks 10
+}
+Floor {
+  translation 70 -55 0.009
+  name "floor(3)"
+  size 14 25
+  appearance Parquetry {
+    type "dark strip"
+  }
+}
+Floor {
+  translation -33 -3.95 0.009
+  name "floor(2)"
+  size 3 3
+  appearance Parquetry {
+    type "dark strip"
+  }
+}
+StraightRoadSegment {
+  translation -35 0 0.01
+  name "road(15)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  rightBorder FALSE
+  length 6.5
+}
+Floor {
+  translation -30 -6.95 0.009
+  name "floor(1)"
+  size 3 9
+  appearance Parquetry {
+    type "dark strip"
+  }
+}
+ParkingLines {
+  translation 18 -64.54 0.01
+  numberOfCarParks 14
+}
+RandomBuilding {
+  translation 24.23 -17.95 0
+}
+Forest {
+  translation -10 -25 0.02
+  shape [
+    0 10
+    10 10
+    10 0
+    0 0
+  ]
+}
+GuardShelter {
+  translation -33.35 -4.32 0
+  rotation 0 0 1 1.5708
+}
+Floor {
+  translation 32 -39 0.009
+  size 49 71
+  appearance Parquetry {
+    type "dark strip"
+  }
+}
+CardboardBox {
+  translation 29.3933 -36.5899 0.926759
+  rotation -0.282660009010747 0.677738519969735 0.678803224694224 3.692686917124235
+  name "cardboard box(4)"
+  size 1.2 0.6 1
+}
+ParkingLines {
+  translation 39.22 -27.81 0.01
+  rotation 0 0 1 1.5707996938995747
+  numberOfCarParks 8
+}
+ParkingLines {
+  translation 57 -37 0.01
+  rotation 0 0 1 1.5707996938995747
+  numberOfCarParks 12
+}
+WorkBarrier {
+  translation -35 -1.8 0.1
+  name "work barrier(3)"
+}
+WorkBarrier {
+  translation -35 -0.6 0.1
+  name "work barrier(2)"
+}
+WorkBarrier {
+  translation -35 0.62 0.1
+  name "work barrier(1)"
+}
+WorkBarrier {
+  translation -35 1.83 0.1
+}
+StraightRoadSegment {
+  translation -5 -40 0.01
+  name "road(14)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  length 2.5
+}
+StraightRoadSegment {
+  translation 5 -30 0.01
+  rotation 0 0 1 -1.5707996938995747
+  name "road(13)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  length 2.5
+}
+CurvedRoadSegment {
+  translation -5 -30 0.01
+  rotation 0 0 1 1.5707996938995747
+  name "road(12)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation -5 -30 0.01
+  rotation 0 0 1 -3.141592653589793
+  name "road(11)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation -5 -30 0.01
+  name "road(5)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  locked FALSE
+}
+YieldPanel {
+  translation 6.24 0.51 -0.0699991
+  rotation -0.7071067811865476 4.329638660197853e-17 -0.7071067811865476 3.14159
+}
+ParkingLines {
+  translation 13 -33 0.01
+  numberOfCarParks 9
+}
+StraightRoadSegment {
+  translation 5 -47.5 0.01
+  rotation 0 0 1 -1.5707996938995747
+  name "road(10)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  length 20
+}
+CurvedRoadSegment {
+  translation 15 -67.5 0.01
+  rotation 0 0 1 -3.141592653589793
+  name "road(9)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  locked FALSE
+}
+RoadIntersection {
+  translation 5 -40 0.01
+  rotation 0 0 1 0.7853996938995746
+  name "road intersection(1)"
+  roadsWidth 5
+  startRoadsLine [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 67.5 -40 0.01
+  name "road(8)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  rightBorder FALSE
+}
+YieldPanel {
+  translation 53.61 -77.3399 -0.0701456
+  rotation -0.7071067811865476 4.329638660197853e-17 -0.7071067811865476 3.14159
+  name "yield panel(2)"
+}
+Pedestrian {
+  translation 49.297 -80.6692 1.43
+  rotation 0 0 1 2.09439
+  name "pedestrian(2)"
+}
+StraightRoadSegment {
+  translation 12.5 -40 0.01
+  name "road(6)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  leftBorder FALSE
+  length 40
+}
+StraightRoadSegment {
+  translation 15 -77.5 0.01
+  name "road(7)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  length 35
+}
+CurvedRoadSegment {
+  translation 50 -67.5 0.01
+  rotation 0 0 1 -1.5707996938995747
+  name "road(4)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  locked FALSE
+}
+CardboardBox {
+  translation 50.5668 -80.8221 1.00347
+  rotation 0.861655746286726 0.35890228321207 0.358801513369479 1.72070091325276
+  name "cardboard box(7)"
+  size 1.2 0.6 1
+}
+StraightRoadSegment {
+  translation 60 -47.5 0.01
+  rotation 0 0 1 -1.5707996938995747
+  name "road(3)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  length 20
+}
+StraightRoadSegment {
+  translation 60 -10 0.01
+  rotation 0 0 1 -1.5707996938995747
+  name "road(2)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  length 22.5
+}
+CurvedRoadSegment {
+  translation 50 -10 0.01
+  name "road(1)"
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  locked FALSE
+}
+RoadIntersection {
+  translation 60 -40 0.01
+  rotation 0 0 1 0.7853996938995746
+  roadsWidth 5
+  startRoadsLine [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  locked FALSE
+}
+Museum {
+  translation 35.34 -53.15 0
+  rotation 0 0 1 1.5708
+}
+ResidentialBuildingWithRoundFront {
+  translation -16.36 -7.103 0.04
+  rotation 0 0 1 3.14159
+}
+Warehouse {
+  translation 82.86 -50.1 0
+  rotation 0 0 1 3.14159
+}
+FastFoodRestaurant {
+  translation 42.9 -88.58 0
+  rotation 0 0 1 1.5708
+}
+StraightRoadSegment {
+  translation -28.5 0 0.01
+  width 5
+  lines [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  length 78.5
+}
+Pedestrian {
+  translation 74.6474 -36.9988 1.42
+  rotation 0 0 1 -2.094395307179586
+  name "pedestrian(1)"
+}
+CardboardBox {
+  translation 73.7487 -36.5547 0.365625
+  rotation 0.861655746286726 0.35890228321207 0.358801513369479 1.72070091325276
+  name "cardboard box(5)"
+  size 1.2 0.6 1
+}
+YieldPanel {
+  translation 69.79 -39.5299 -0.0700751
+  rotation -0.7071067811865476 4.329638660197853e-17 -0.7071067811865476 3.14159
+  name "yield panel(1)"
+}
+Moose {
+  translation -33 0 0.396164
+  rotation -0.00201434869914228 0.9999979546440729 0.00018195325910121428 0.001419775453173856
+  controller "moosetest"
+  bodySlot [
+    Camera {
+      translation 1.47 0 0
+      rotation 0 -1 0 -0.523595307179586
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+}
+CardboardBox {
+  translation -33 0.00932793 1.04274
+  rotation 0.5788813980915462 0.5769941097866047 0.5761719571578787 2.0933224234688614
+  name "robot cardboard payload"
+  size 1.2 0.6 1
+  mass 5
+}
+CardboardBox {
+  translation 8.34208 3.35851 0.320338
+  rotation 0.861655746286726 0.35890228321207 0.358801513369479 1.72070091325276
+  name "cardboard box(1)"
+  size 1.2 0.6 1
+}
+CardboardBox {
+  translation 29.3933 -36.5899 0.286759
+  rotation -0.282660009010747 0.677738519969735 0.678803224694224 3.692686917124235
+  name "cardboard box(2)"
+  size 1.2 0.6 1
+}
+CardboardBox {
+  translation 8.28472 3.39386 0.972436
+  rotation 0.861655746286726 0.35890228321207 0.358801513369479 1.72070091325276
+  name "cardboard box(3)"
+  size 1.2 0.6 1
+}
