@@ -10,6 +10,8 @@ if __name__ == "__main__":
     timestep = 64
     max_speed = 7.0
     set_speed = 7.0
+    Centro = 32
+    margem = 4
     
     left_motor1 = robot.getDevice('left motor 1')
     left_motor2 = robot.getDevice('left motor 2')
@@ -40,9 +42,7 @@ if __name__ == "__main__":
         return(image)
 
     def threshold_image(image):
-        print("grayscale1:",image.shape)
         image = np.uint8(image)
-        print("grayscale2:",image.shape)
         image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
         ret,image = cv2.threshold(image,150,255,cv2.THRESH_BINARY)
         image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
@@ -57,11 +57,11 @@ if __name__ == "__main__":
             if M['m00']!=0:
                 cx=int(M['m10']/M['m00'])
                 cy=int(M['m01']/M['m00'])
-                if cx>=120:
+                if cx>=Centro+margem:
                     set_robot_speed([set_speed,0])
-                if cx <120 and cx > 40:
-                    set_robot_speed([set_speed,set_speed])
-                if cx <=40:
+                if cx <Centro+margem and cx > Centro-margem:
+                    set_robot_speed([max_speed,max_speed])
+                if cx <=Centro-margem:
                     set_robot_speed([0,set_speed])
         image = cv2.circle(image,(cx,cy),5,(0,255,0),-1)
         cv2.imshow("image",image)
@@ -71,4 +71,8 @@ if __name__ == "__main__":
 while robot.step(timestep) != -1:
     image = getImage()
     image,contours = threshold_image(image)
-    keep_line(image,contours)
+    try:
+        keep_line(image,contours)
+    except:
+        print("test")
+    timestep=64
