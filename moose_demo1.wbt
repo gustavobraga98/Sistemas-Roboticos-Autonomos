@@ -26,8 +26,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.3668039374836162 0.524116774102881 -0.7686068426383574 1.6480828425075775
-  position -32.56709004853183 8.619590710896276 16.383319819119826
+  orientation -0.26157145044526453 0.9328699163062939 0.24765721383123215 1.3876917891629728
+  position -12.162467650631498 -31.316846771820508 75.33015207139972
   near 1
   follow "moose"
 }
@@ -411,6 +411,11 @@ RoadIntersection {
   rotation 0 0 1 0.7853996938995746
   name "road intersection(1)"
   roadsWidth 5
+  startRoadsStartLine [
+    "https://raw.githubusercontent.com/cyberbotics/webots/R2022a/projects/objects/road/protos/textures/road_line_dashed.png"
+    "https://raw.githubusercontent.com/cyberbotics/webots/R2022a/projects/objects/road/protos/textures/road_line_dashed.png"
+    "https://raw.githubusercontent.com/cyberbotics/webots/R2022a/projects/objects/road/protos/textures/road_line_dashed.png"
+  ]
   startRoadsLine [
     RoadLine {
       type "continuous"
@@ -519,6 +524,11 @@ RoadIntersection {
   translation 60 -40 0.01
   rotation 0 0 1 0.7853996938995746
   roadsWidth 5
+  startRoadsStartLine [
+    "https://raw.githubusercontent.com/cyberbotics/webots/R2022a/projects/objects/road/protos/textures/road_line_dashed.png"
+    "https://raw.githubusercontent.com/cyberbotics/webots/R2022a/projects/objects/road/protos/textures/road_line_dashed.png"
+    "https://raw.githubusercontent.com/cyberbotics/webots/R2022a/projects/objects/road/protos/textures/road_line_dashed.png"
+  ]
   startRoadsLine [
     RoadLine {
       type "continuous"
